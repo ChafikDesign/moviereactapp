@@ -35,6 +35,18 @@ export function getTopRated() {
     ).then(result => result.json())
 }
 
+
+export function getTrending() {
+    return fetch(
+        getApiUrl(
+            `/trending/movie/week`,
+            {
+                language: 'fr-FR',
+            }
+        )
+    ).then(result => result.json())
+}
+
 export function getLatest() {
     return fetch(
         getApiUrl(

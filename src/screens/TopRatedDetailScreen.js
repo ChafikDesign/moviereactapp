@@ -2,7 +2,7 @@ import React, {useLayoutEffect, useState, useEffect} from 'react';
 import {Text, View, Image, StyleSheet, ScrollView, Button, Linking} from "react-native";
 import {getLatest, getMovie} from "../services/movie";
 
-export const DetailScreen = (props) => {
+export const TopRatedDetailScreen = (props) => {
     const {route, navigation} = props;
     const [movie, setMovie] = useState(null);
 

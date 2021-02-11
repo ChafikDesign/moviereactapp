@@ -28,16 +28,10 @@ export const GenreMovieScreen = (props) => {
                     renderItem={({item, index}) => <FilmItem
                         film={item}
                         index={index}
-                        goToDetail={() => thisprops.navigation.navigate('Detail', {title: item.title, id: item.id})}
+                        goToDetail={() => props.navigation.navigate('Detail', {title: item.title, id: item.id})}
                         screenName={props.route.name}
                     />}
                     keyExtractor={item => item.id.toString()}
-                    onEndReachedThreshold={0.5}
-                    onEndReached={() => {
-                        if (this.page < this.totalPages) {
-                            this._loadFilms();
-                        }
-                    }}
                 />
                 { isLoading ?
                     <View style={styles.loading_container}>
