@@ -27,7 +27,7 @@ export const GenreScreen = (props) => {
             <FlatList
              numColumns={2}
                     data={films}
-                    renderItem={({item, index}) => <GenreItem film={item} index={index} goToDetail={() => props.navigation.navigate('Home' , { screen: 'Genre' }, {title: item.title, id: item.id})} />}
+                    renderItem={({item, index}) => <GenreItem film={item} index={index} goToDetail={() => props.navigation.navigate( 'Genre' , {title: item.title, id: item.id})} />}
                     keyExtractor={item => item.id.toString()}
                 />
 

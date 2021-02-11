@@ -75,7 +75,7 @@ export function getGenre() {
 export function getMovieByGenre(id) {
     return fetch(
         getApiUrl(
-            `/discover/movie/${id}`,
+            `/discover/movie/`,
             {
                 language: 'fr-FR',
                 with_genres: id

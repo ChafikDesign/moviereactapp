@@ -11,14 +11,15 @@ export const GenreMovieScreen = (props) => {
     useEffect(() => {
         setIsLoading(true);
         if (route && route.params && route.params.id) {
-             getMovieByGenre(route.params.id).then(setFilms,data => {
+             getMovieByGenre(route.params.id)
+             .then(data => {
             setIsLoading(false);
             setFilms(data.results);
             console.log(data.results)
 
         })
         }}, [])
-
+    
     return (
         <SafeAreaView style={styles.main_container}>
             <View>
